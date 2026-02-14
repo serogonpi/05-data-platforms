@@ -1,0 +1,26 @@
+name: ingestion.zone_lookup
+type: bq.seed
+
+parameters:
+  path: zone_lookup.csv
+
+columns:
+  - name: location_id
+    type: integer
+    primary_key: true
+    checks:
+      - name: not_null
+      - name: unique
+      - name: positive
+  - name: borough
+    type: string
+    checks:
+      - name: not_null
+  - name: zone
+    type: string
+    checks:
+      - name: not_null
+  - name: service_zone
+    type: string
+    checks:
+      - name: not_null

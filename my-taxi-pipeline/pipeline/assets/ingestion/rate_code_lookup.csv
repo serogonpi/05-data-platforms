@@ -1,0 +1,8 @@
+rate_code_id,rate_code_name
+1,standard_rate
+2,jfk
+3,newark
+4,nassau_or_westchester
+5,negotiated_fare
+6,group_ride
+99,unknown

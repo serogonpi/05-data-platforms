@@ -1,0 +1,17 @@
+name: ingestion.rate_code_lookup
+type: bq.seed
+
+parameters:
+  path: rate_code_lookup.csv
+
+columns:
+  - name: rate_code_id
+    type: integer
+    primary_key: true
+    checks:
+      - name: not_null
+      - name: unique
+  - name: rate_code_name
+    type: string
+    checks:
+      - name: not_null
