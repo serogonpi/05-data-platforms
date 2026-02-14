@@ -6,7 +6,7 @@ connection: bruin-project
 
 materialization:
   type: table
-  strategy: append
+  strategy: create+replace
 
 columns:
   - name: pickup_datetime
